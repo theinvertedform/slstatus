@@ -68,6 +68,6 @@ static const struct arg args[] = {
 	{ battery_state, "[ %s ", "BAT0"   },
 	{ battery_perc,   "%s%%] ", "BAT0"   },
 	{ run_command, "[ %s%%] ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
+	{ run_command, "[ %s%%] ", "xbacklight -get | cut -c -2" },
 	{ datetime, "[%s] ", " %d %b %Y (%a)  %R:%S" },
-	{ run_command, "[ %s%%] ", "xbacklight -get" },
 };
